@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ar"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>إنشاء حساب جديد - Spherely</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1877f2;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #165eab;
+        }
+
+        .login-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style> 
+</head> 
+<body> 
+    <div class="register-container">
+        <h1>إنشاء حساب جديد</h1>
+        <form id="register-form">
+            <input type="text" class="input-field" placeholder="اسم المستخدم" required>
+            <input type="password" class="input-field" id="password" placeholder="كلمة المرور" required>
+            <input type="password" class="input-field" id="confirm-password" placeholder="تأكيد كلمة المرور" required>
+            <div id="error-message" class="error-message"></div>
+            <button type="submit" class="button">إنشاء حساب</button>
+        </form>
+        <div class="login-link">
+            <p>لديك حساب؟ <a href="spherely.html">تسجيل الدخول</a></p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('register-form');
+        const passwordField = document.getElementById('password');
+        const confirmPasswordField = document.getElementById('confirm-password');
+        const errorMessage = document.getElementById('error-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const password = passwordField.value;
+            const confirmPassword = confirmPasswordField.value;
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "كلمات المرور غير متطابقة. الرجاء المحاولة مرة أخرى.";
+            } else {
+                // في حال كان كلمات المرور متطابقة
+                errorMessage.textContent = ""; // حذف الرسالة السابقة إذا كانت موجودة
+                window.location.href = 'spherely.html'; // إعادة التوجيه إلى صفحة تسجيل الدخول
+            }
+        });
+    </script>
+ 
+</body></html>

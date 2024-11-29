@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ar"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>تسجيل الدخول - Spherely</title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1877f2;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #165eab;
+        }
+
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .register-link a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style> 
+</head> 
+<body> 
+    <div class="login-container">
+        <h1>تسجيل الدخول</h1>
+        <form action="dashboard.html" method="post">
+            <input type="text" class="input-field" placeholder="اسم المستخدم" required>
+            <input type="password" class="input-field" placeholder="كلمة المرور" required>
+            <button type="submit" class="button">تسجيل الدخول</button>
+        </form>
+        <div class="register-link">
+            <p>ليس لديك حساب؟ <a href="register.html">إنشاء حساب جديد</a></p>
+        </div>
+    </div>
+ 
+</body></html>
